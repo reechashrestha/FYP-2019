@@ -14,9 +14,9 @@ class CreateBookingsDetailsTable extends Migration
     public function up()
     {
         Schema::create('tbl_bookings_details', function (Blueprint $table) {
-            $table->integer('booking_details_id');
-            $table->unsignedInteger('bookings_id')->nullable();
-            $table->foreign('bookings_id')->references('bookings_id')->on('bookings');
+            $table->increments('booking_details_id');
+            $table->integer('bookings_id')->unsigned();
+            $table->foreign('bookings_id')->references('bookings_id')->on('tbl_bookings');
             $table->rememberToken();
             $table->timestamps();
         });

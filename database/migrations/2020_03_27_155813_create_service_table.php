@@ -14,7 +14,7 @@ class CreateServiceTable extends Migration
     public function up()
     {
         Schema::create('tbl_service', function (Blueprint $table) {
-            $table->string('service_id');
+            $table->increments('service_id');
             $table->string('category_id');
             $table->string('service_name');
             $table->string('service_desc');

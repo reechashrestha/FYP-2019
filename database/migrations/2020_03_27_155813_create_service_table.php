@@ -15,7 +15,8 @@ class CreateServiceTable extends Migration
     {
         Schema::create('tbl_service', function (Blueprint $table) {
             $table->increments('service_id');
-            $table->string('category_id');
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('category_id')->on('tbl_category');
             $table->string('service_name');
             $table->string('service_desc');
             $table->string('service_image');

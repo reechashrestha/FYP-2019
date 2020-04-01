@@ -226,27 +226,27 @@ return [
         ],
         [
             'text'        => 'Services',
-            'url'         => 'admin/services',
+            'url'         => 'services',
             'icon'        => 'fas fa-concierge-bell',
         ],
         [
             'text'        => 'Bookings Details',
-            'url'         => 'admin/bookings',
+            'url'         => 'bookings',
             'icon'        => 'fas fa-calendar-alt',
         ],
         [
             'text'        => 'Payments',
-            'url'         => 'admin/payments',
+            'url'         => 'payments',
             'icon'        => 'fas fa-money-check-alt',
         ],
         [
             'text'        => 'Manage Users',
-            'url'         => 'admin/manage_user',
+            'url'         => 'manage_user',
             'icon'        => 'fas fa-user',
         ],
         [
             'text'        => 'Categories',
-            'url'         => 'admin/categories',
+            'url'         => 'categories',
             'icon'        => 'fas fa-bars',
         ],
 

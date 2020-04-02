@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class payment extends Model
 {
-    protected $primaryKey='bookings_id';
+    protected $primaryKey='payment_id';
     protected $table= 'tbl_payment';
     protected $fillable=[
-        'payment_id','payment_method','payment_status'
+        'payment_method','payment_status'
     ];
 
     public function items(){

@@ -22,9 +22,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('categories', 'CategoryController');
 Route::resource('payments', 'PaymentController');
-
-
 Route::resource('services', 'ServiceController');
+
+
+
+
+//Route::get('crud/edit_service/{service_id}','ServiceController@edit');
 //Route::get('/services', 'ServiceController@index');
 //Route::post('/add_service', 'ServiceController@store')->name('add_service');
 

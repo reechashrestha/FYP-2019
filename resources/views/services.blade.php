@@ -90,22 +90,32 @@
                     <table class="table table-bordered table-striped">
                         <tr>
                             <th width="10%">Category ID</th>
-                            <th width="20%">Service Name</th>
-                            <th width="25%">Description</th>
+                            <th width="30%">Service Name</th>
+                            <th width="30%">Description</th>
                             <th width="10%">Status</th>
                             <th width="10%">Image</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th width="10%"></th>
                         </tr>
-                        @foreach($tbl_service as $tbl_service)
+                        @foreach($service as $service)
                             <tr>
-                                <td>{{ $tbl_service->category_id }}</td>
-                                <td>{{ $tbl_service->service_name }}</td>
-                                <td>{{ $tbl_service->service_desc }}</td>
-                                <td>{{ $tbl_service->service_status }}</td>
-                                <td> <img src="{{asset('uploads/service/'.$tbl_service->service_image) }}" width="100px;" height="100px;" alt="Image"></td>
-                                <td> <a href="/editservice/{{$tbl_service->id}}" class="btn btn-success">Edit</a> </td>
-                                <td> <a href="" class="btn btn-danger">Delete</a> </td>
+                                <td>{{ $service->category_id }}</td>
+                                <td>{{ $service->service_name }}</td>
+                                <td>{{ $service->service_desc }}</td>
+                                <td>{{ $service->service_status }}</td>
+                                <td> <img src="{{asset('uploads/service/'.$service->service_image) }}" width="100px;" height="100px;" alt="Image"></td>
+                                <td class="table-buttons">
+                                <a href="{{ route('services.edit', $service) }}" class="btn btn-primary">
+                                    <i class="fas fa-pencil-alt" ></i>
+                                </a>
+                                <form method="POST" action="{{ route('services.destroy', $service) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <br/>
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </form>
+                                </td>
                             </tr>
                         @endforeach
                     </table>

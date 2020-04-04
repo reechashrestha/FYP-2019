@@ -13,6 +13,7 @@ class service extends Model
         'category_id','service_name','service_desc','service_image','service_status'
     ];
 
+
     public function items(){
         return $this->hasMany('App/Items');
 

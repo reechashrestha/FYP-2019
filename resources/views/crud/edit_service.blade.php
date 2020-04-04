@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1> Edit Service Data</h1>
 @stop
 
 @section('content')
@@ -13,9 +13,6 @@
         }
     </style>
     <div class="card uper">
-        <div class="card-header">
-            Edit Service Data
-        </div>
         <div class="card-body">
             @if ($errors->any())
                 <div class="alert alert-danger">

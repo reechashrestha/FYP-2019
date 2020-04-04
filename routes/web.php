@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('categories', 'CategoryController');
 Route::resource('payments', 'PaymentController');
 Route::resource('services', 'ServiceController');
+Route::resource('bookings', 'BookingController');
 
 
 

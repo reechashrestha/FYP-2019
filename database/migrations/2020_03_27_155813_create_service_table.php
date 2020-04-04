@@ -19,7 +19,7 @@ class CreateServiceTable extends Migration
             $table->foreign('category_id')->references('category_id')->on('tbl_category');
             $table->string('service_name');
             $table->string('service_desc');
-            $table->string('service_image');
+            $table->mediumText('service_image')->nullable();
             $table->string('service_status');
             $table->timestamps();
         });

@@ -24,8 +24,9 @@ Route::resource('categories', 'CategoryController');
 Route::resource('payments', 'PaymentController');
 
 
-
-
+Route::resource('services', 'ServiceController');
+//Route::get('/services', 'ServiceController@index');
+//Route::post('/add_service', 'ServiceController@store')->name('add_service');
 
 //Route::get('/categories', 'CategoryController@index')->name('category');
 //Route::resource('crud_admin/add_categories', 'CategoryController@create')->name('create');
